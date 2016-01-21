@@ -45,8 +45,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         mainListView.setAdapter(mArrayAdapter);
 
-        mNameList.add(mainEditText.getText().toString());
-        mArrayAdapter.notifyDataSetChanged();
+
 // Set the ListView to use the ArrayAdapter
 
     }
@@ -64,6 +63,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         mainTextView.setText(mainEditText.getText().toString()
                 + " is learning Android development!");
+        mNameList.add(mainEditText.getText().toString());
+        mArrayAdapter.notifyDataSetChanged();
 
 
 

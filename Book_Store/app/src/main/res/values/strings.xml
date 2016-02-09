@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Book_Store</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint1">Title of the Book</string>
+    <string name="hint2">Author</string>
+    <string name="hint3">Publisher</string>
+    <string name="hint4">Novel</string>
+    <string name="hint5">Subject</string>
+    <string name="hint6">Branch</string>
+    <string name="hint7">Semester/Year</string>
+    <string name="button">Sign in</string>
+
+</resources>

@@ -1,47 +1,25 @@
-package sammita.event;
+package sammita.listevents;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends Activity {
 
+    String[] events = {"Event 1","Event 2","Event 3","Event 4","Event 5"};
 
-    Button btnStartEventActivity,btnStartRegistration;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnStartEventActivity = (Button) findViewById(R.id.main_button2);
+        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_listview, events);
 
-        btnStartEventActivity.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Intent myintent1 = new Intent(MainActivity.this,Event.class);
-                startActivity(myintent1);
-
-            }
-        });
-
-
-
-        btnStartRegistration=(Button) findViewById(R.id.main_button1);
-
-        btnStartRegistration.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Intent myintent2 = new Intent(MainActivity.this,Registration.class);
-                startActivity(myintent2);
-
-            }
-        });
-
-
+        ListView listView = (ListView) findViewById(R.id.event_list);
+        listView.setAdapter(adapter);
     }
 
     @Override
@@ -56,7 +34,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -65,11 +42,5 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onClick(View v) {
-
-
     }
 }

@@ -50,7 +50,7 @@
             android:layout_margin="4dp"
             />
         <Button
-            android:id="@+id/btn3"
+            android:id="@+id/btn4"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="#FFF"
